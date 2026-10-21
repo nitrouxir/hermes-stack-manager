@@ -1,8 +1,47 @@
 # Hermes Stack Manager
 
-[![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg)](https://github.com/faradoros/hermes-stack-manager)
+[![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg)](https://github.com/faradoros/hermes-stack-manager/releases)
 [![Project](https://img.shields.io/badge/ecosystem-Nitroux-indigo.svg)](https://nitroux.ir)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-brightgreen.svg)](#)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+
+---
+
+### 🌐 Language / زبان‌ها:
+👉 **[🇮🇷 مطالعه راهنمای کامل نصب و راه‌اندازی به زبان فارسی](README.fa.md)**  
+👉 **[🇬🇧 English Documentation](#-about-the-project)**
+
+---
+
+## 🇮🇷 راهنمای سریع نصب و اجرا (فارسی)
+
+<div dir="rtl">
+
+### مراحل راه‌اندازی روی ویندوز:
+1. **دانلود یا کلون پروژه:**
+   ```powershell
+   git clone https://github.com/faradoros/hermes-stack-manager.git
+   cd hermes-stack-manager
+   ```
+   *(یا فایل Zip را از بخش [Releases](https://github.com/faradoros/hermes-stack-manager/releases) دانلود و اکسترکت کنید)*
+
+2. **نصب خودکار تمام پیش‌نیازها و سرویس‌ها (فقط یک‌بار):**
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
+   ```
+   این اسکریپت تمام پکیج‌ها (Git, Python, Node, 9Router, Hermes Agent, WebUI) را بررسی و به صورت خودکار نصب و تنظیم می‌کند و شورتکات دسکتاپ می‌سازد.
+
+3. **اجرای کنترل پنل (GUI):**
+   روی فایل `Run-Manager.bat` یا شورتکات دسکتاپ دابل‌کلیک کنید. سپس با زدن دکمه **Start Stack**، سرویس‌ها روشن شده و محیط وب روی پورت **8787** در دسترس قرار می‌گیرد:
+   👉 **`http://localhost:8787`**
+
+برای مطالعه مستندات و آموزش‌های بیشتر به سایت **[نیتروکس (nitroux.ir)](https://nitroux.ir)** مراجعه فرمایید.
+
+</div>
+
+---
+
+## 📖 About the Project
 
 > **Hermes Stack Manager** is an all-in-one Desktop GUI Control Center, Automated Installer, and Service Manager for the Hermes AI ecosystem (**Hermes Agent**, **Hermes WebUI**, and **9Router**).
 > 
@@ -24,7 +63,7 @@ For documentation, tutorials, resources, and community updates, visit:
   - **Cross-Platform (macOS & Windows)**: Tkinter-based control panel (`HermesManager.py`).
 - ⚡ **One-Click Automated Setup**:
   - `Install-HermesStack.ps1` automatically verifies/installs Git, Node.js, Python, uv, 9Router, Hermes Agent, and Hermes WebUI.
-  - Automatically provisions configuration and desktop shortcuts.
+  - Automatically provisions configuration, API routing, and desktop shortcuts.
 - 🔄 **Service Lifecycle Management**:
   - `start.ps1` — Launches 9Router (port 20128) and Hermes WebUI (port 8787).
   - `stop.ps1` — Gracefully stops all active stack services and lingering ports.
@@ -33,9 +72,15 @@ For documentation, tutorials, resources, and community updates, visit:
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (English)
 
 ### 1. Automated Installation (Windows)
+Clone the repository or download the latest release:
+```powershell
+git clone https://github.com/faradoros/hermes-stack-manager.git
+cd hermes-stack-manager
+```
+
 Run PowerShell as Administrator or with standard privileges and execute:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
@@ -50,6 +95,10 @@ powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
   ```bash
   python HermesManager.py
   ```
+
+### 3. Access Stack Services
+- **Hermes WebUI**: `http://localhost:8787`
+- **9Router API Proxy**: `http://localhost:20128`
 
 ---
 
@@ -66,6 +115,7 @@ powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
 ## 🔗 Links & Resources
 - **Website & Portal**: [nitroux.ir](https://nitroux.ir)
 - **GitHub Repository**: [github.com/faradoros/hermes-stack-manager](https://github.com/faradoros/hermes-stack-manager)
+- **Persian Guide**: [README.fa.md](README.fa.md)
 
 ---
 
