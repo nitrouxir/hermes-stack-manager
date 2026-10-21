@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.lnk
