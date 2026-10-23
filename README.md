@@ -1,4 +1,4 @@
-﻿# Hermes Stack Manager
+# Hermes Stack Manager
 
 [![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg)](https://github.com/nitrouxir/hermes-stack-manager/releases)
 [![Project](https://img.shields.io/badge/ecosystem-Nitroux-indigo.svg)](https://nitroux.ir)
@@ -7,41 +7,41 @@
 
 ---
 
-### ًںŒگ Language / ط²ط¨ط§ظ†â€Œظ‡ط§:
-ًں‘‰ **[ًں‡®ًں‡· ظ…ط·ط§ظ„ط¹ظ‡ ط±ط§ظ‡ظ†ظ…ط§غŒ ع©ط§ظ…ظ„ ظ†طµط¨ ظˆ ط±ط§ظ‡â€Œط§ظ†ط¯ط§ط²غŒ ط¨ظ‡ ط²ط¨ط§ظ† ظپط§ط±ط³غŒ](README.fa.md)**  
-ًں‘‰ **[ًں‡¬ًں‡§ English Documentation](#-about-the-project)**
+### 🌐 Language / زبان‌ها:
+👉 **[🇮🇷 مطالعه راهنمای کامل نصب و راه‌اندازی به زبان فارسی](README.fa.md)**  
+👉 **[🇬🇧 English Documentation](#-about-the-project)**
 
 ---
 
-## ًں‡®ًں‡· ط±ط§ظ‡ظ†ظ…ط§غŒ ط³ط±غŒط¹ ظ†طµط¨ ظˆ ط§ط¬ط±ط§ (ظپط§ط±ط³غŒ)
+## 🇮🇷 راهنمای سریع نصب و اجرا (فارسی)
 
 <div dir="rtl">
 
-### ظ…ط±ط§ط­ظ„ ط±ط§ظ‡â€Œط§ظ†ط¯ط§ط²غŒ ط±ظˆغŒ ظˆغŒظ†ط¯ظˆط²:
-1. **ط¯ط§ظ†ظ„ظˆط¯ غŒط§ ع©ظ„ظˆظ† ظ¾ط±ظˆعکظ‡:**
+### مراحل راه‌اندازی روی ویندوز:
+1. **دانلود یا کلون پروژه:**
    ```powershell
    git clone https://github.com/nitrouxir/hermes-stack-manager.git
    cd hermes-stack-manager
    ```
-   *(غŒط§ ظپط§غŒظ„ Zip ط±ط§ ط§ط² ط¨ط®ط´ [Releases](https://github.com/nitrouxir/hermes-stack-manager/releases) ط¯ط§ظ†ظ„ظˆط¯ ظˆ ط§ع©ط³طھط±ع©طھ ع©ظ†غŒط¯)*
+   *(یا فایل Zip را از بخش [Releases](https://github.com/nitrouxir/hermes-stack-manager/releases) دانلود و اکسترکت کنید)*
 
-2. **ظ†طµط¨ ط®ظˆط¯ع©ط§ط± طھظ…ط§ظ… ظ¾غŒط´â€Œظ†غŒط§ط²ظ‡ط§ ظˆ ط³ط±ظˆغŒط³â€Œظ‡ط§ (ظپظ‚ط· غŒع©â€Œط¨ط§ط±):**
+2. **نصب خودکار تمام پیش‌نیازها و سرویس‌ها (فقط یک‌بار):**
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
    ```
-   ط§غŒظ† ط§ط³ع©ط±غŒظ¾طھ طھظ…ط§ظ… ظ¾ع©غŒط¬â€Œظ‡ط§ (Git, Python, Node, 9Router, Hermes Agent, WebUI) ط±ط§ ط¨ط±ط±ط³غŒ ظˆ ط¨ظ‡ طµظˆط±طھ ط®ظˆط¯ع©ط§ط± ظ†طµط¨ ظˆ طھظ†ط¸غŒظ… ظ…غŒâ€Œع©ظ†ط¯ ظˆ ط´ظˆط±طھع©ط§طھ ط¯ط³ع©طھط§ظ¾ ظ…غŒâ€Œط³ط§ط²ط¯.
+   این اسکریپت تمام پکیج‌ها (Git, Python, Node, 9Router, Hermes Agent, WebUI) را بررسی و به صورت خودکار نصب و تنظیم می‌کند و شورتکات دسکتاپ می‌سازد.
 
-3. **ط§ط¬ط±ط§غŒ ع©ظ†طھط±ظ„ ظ¾ظ†ظ„ (GUI):**
-   ط±ظˆغŒ ظپط§غŒظ„ `Run-Manager.bat` غŒط§ ط´ظˆط±طھع©ط§طھ ط¯ط³ع©طھط§ظ¾ ط¯ط§ط¨ظ„â€Œع©ظ„غŒع© ع©ظ†غŒط¯. ط³ظ¾ط³ ط¨ط§ ط²ط¯ظ† ط¯ع©ظ…ظ‡ **Start Stack**طŒ ط³ط±ظˆغŒط³â€Œظ‡ط§ ط±ظˆط´ظ† ط´ط¯ظ‡ ظˆ ظ…ط­غŒط· ظˆط¨ ط±ظˆغŒ ظ¾ظˆط±طھ **8787** ط¯ط± ط¯ط³طھط±ط³ ظ‚ط±ط§ط± ظ…غŒâ€Œع¯غŒط±ط¯:
-   ًں‘‰ **`http://localhost:8787`**
+3. **اجرای کنترل پنل (GUI):**
+   روی فایل `Run-Manager.bat` یا شورتکات دسکتاپ دابل‌کلیک کنید. سپس با زدن دکمه **Start Stack**، سرویس‌ها روشن شده و محیط وب روی پورت **8787** در دسترس قرار می‌گیرد:
+   👉 **`http://localhost:8787`**
 
-ط¨ط±ط§غŒ ظ…ط·ط§ظ„ط¹ظ‡ ظ…ط³طھظ†ط¯ط§طھ ظˆ ط¢ظ…ظˆط²ط´â€Œظ‡ط§غŒ ط¨غŒط´طھط± ط¨ظ‡ ط³ط§غŒطھ **[ظ†غŒطھط±ظˆع©ط³ (nitroux.ir)](https://nitroux.ir)** ظ…ط±ط§ط¬ط¹ظ‡ ظپط±ظ…ط§غŒغŒط¯.
+برای مطالعه مستندات و آموزش‌های بیشتر به سایت **[نیتروکس (nitroux.ir)](https://nitroux.ir)** مراجعه فرمایید.
 
 </div>
 
 ---
 
-## ًں“– About the Project
+## 📖 About the Project
 
 > **Hermes Stack Manager** is an all-in-one Desktop GUI Control Center, Automated Installer, and Service Manager for the Hermes AI ecosystem (**Hermes Agent**, **Hermes WebUI**, and **9Router**).
 > 
@@ -49,30 +49,30 @@
 
 ---
 
-## ًںŒگ Nitroux Ecosystem
+## 🌐 Nitroux Ecosystem
 This project is part of **Nitroux** AI infrastructure and developer tools.  
 For documentation, tutorials, resources, and community updates, visit:  
-ًں‘‰ **[https://nitroux.ir](https://nitroux.ir)**
+👉 **[https://nitroux.ir](https://nitroux.ir)**
 
 ---
 
-## âœ¨ Features
+## ✨ Features
 
-- ًں–¥ï¸ڈ **Modern Desktop GUI**:
+- 🖥️ **Modern Desktop GUI**:
   - **Windows (WPF / XAML)**: Native dark slate interface (`HermesManager.ps1` / `Run-Manager.bat`).
   - **Cross-Platform (macOS & Windows)**: Tkinter-based control panel (`HermesManager.py`).
-- âڑ، **One-Click Automated Setup**:
+- ⚡ **One-Click Automated Setup**:
   - `Install-HermesStack.ps1` automatically verifies/installs Git, Node.js, Python, uv, 9Router, Hermes Agent, and Hermes WebUI.
   - Automatically provisions configuration, API routing, and desktop shortcuts.
-- ًں”„ **Service Lifecycle Management**:
-  - `start.ps1` â€” Launches 9Router (port 20128) and Hermes WebUI (port 8787).
-  - `stop.ps1` â€” Gracefully stops all active stack services and lingering ports.
-  - `status.ps1` â€” Real-time health check of stack ports and endpoints.
-  - `update.ps1` â€” Seamless one-click updater for Agent, WebUI repo, and dependencies.
+- 🔄 **Service Lifecycle Management**:
+  - `start.ps1` — Launches 9Router (port 20128) and Hermes WebUI (port 8787).
+  - `stop.ps1` — Gracefully stops all active stack services and lingering ports.
+  - `status.ps1` — Real-time health check of stack ports and endpoints.
+  - `update.ps1` — Seamless one-click updater for Agent, WebUI repo, and dependencies.
 
 ---
 
-## ًںڑ€ Quick Start (English)
+## 🚀 Quick Start (English)
 
 ### 1. Automated Installation (Windows)
 Clone the repository or download the latest release:
@@ -102,7 +102,7 @@ powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
 
 ---
 
-## ًں› ï¸ڈ Stack Architecture
+## 🛠️ Stack Architecture
 
 | Component | Default Port | Description |
 |-----------|--------------|-------------|
@@ -112,14 +112,13 @@ powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
 
 ---
 
-## ًں”— Links & Resources
+## 🔗 Links & Resources
 - **Website & Portal**: [nitroux.ir](https://nitroux.ir)
 - **GitHub Repository**: [github.com/nitrouxir/hermes-stack-manager](https://github.com/nitrouxir/hermes-stack-manager)
 - **Persian Guide**: [README.fa.md](README.fa.md)
 
 ---
 
-## ًں“„ License
+## 📄 License
 Released under the [MIT License](LICENSE).
 Part of the **Nitroux** project.
-
