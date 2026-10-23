@@ -17,25 +17,17 @@
 
 <div dir="rtl">
 
-### مراحل راه‌اندازی روی ویندوز:
-1. **دانلود یا کلون پروژه:**
-   ```powershell
-   git clone https://github.com/nitrouxir/hermes-stack-manager.git
-   cd hermes-stack-manager
-   ```
-   *(یا فایل Zip را از بخش [Releases](https://github.com/nitrouxir/hermes-stack-manager/releases) دانلود و اکسترکت کنید)*
+### مراحل راه‌اندازی روی ویندوز (Windows):
+1. **دانلود پروژه:** `git clone https://github.com/nitrouxir/hermes-stack-manager.git`
+2. **نصب خودکار:** اجرای `powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1`
+3. **اجرای پنل:** دابل‌کلیک روی `Run-Manager.bat` و کلیک روی **Start Stack** (آدرس: `http://localhost:8787`).
 
-2. **نصب خودکار تمام پیش‌نیازها و سرویس‌ها (فقط یک‌بار):**
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
-   ```
-   این اسکریپت تمام پکیج‌ها (Git, Python, Node, 9Router, Hermes Agent, WebUI) را بررسی و به صورت خودکار نصب و تنظیم می‌کند و شورتکات دسکتاپ می‌سازد.
+### مراحل راه‌اندازی روی مک (macOS):
+1. **دانلود پروژه:** `git clone https://github.com/nitrouxir/hermes-stack-manager.git && cd hermes-stack-manager`
+2. **نصب خودکار:** اجرای `bash install-mac.sh`
+3. **اجرای پنل:** اجرای `python3 HermesManager.py` (یا دابل‌کلیک روی `Run-Manager.command`).
 
-3. **اجرای کنترل پنل (GUI):**
-   روی فایل `Run-Manager.bat` یا شورتکات دسکتاپ دابل‌کلیک کنید. سپس با زدن دکمه **Start Stack**، سرویس‌ها روشن شده و محیط وب روی پورت **8787** در دسترس قرار می‌گیرد:
-   👉 **`http://localhost:8787`**
-
-برای مطالعه مستندات و آموزش‌های بیشتر به سایت **[نیتروکس (nitroux.ir)](https://nitroux.ir)** مراجعه فرمایید.
+👉 برای مطالعه جزئیات کامل، **[راهنمای فارسی کامل (README.fa.md)](README.fa.md)** را مشاهده کنید.
 
 </div>
 
@@ -60,12 +52,13 @@ For documentation, tutorials, resources, and community updates, visit:
 
 - 🖥️ **Modern Desktop GUI**:
   - **Windows (WPF / XAML)**: Native dark slate interface (`HermesManager.ps1` / `Run-Manager.bat`).
-  - **Cross-Platform (macOS & Windows)**: Tkinter-based control panel (`HermesManager.py`).
+  - **Cross-Platform (macOS & Windows)**: Tkinter-based control panel (`HermesManager.py` / `Run-Manager.command`).
 - ⚡ **One-Click Automated Setup**:
-  - `Install-HermesStack.ps1` automatically verifies/installs Git, Node.js, Python, uv, 9Router, Hermes Agent, and Hermes WebUI.
+  - `Install-HermesStack.ps1` (Windows) & `install-mac.sh` (macOS).
+  - Automatically verifies/installs Git, Node.js, Python, uv, 9Router, Hermes Agent, and Hermes WebUI.
   - Automatically provisions configuration, API routing, and desktop shortcuts.
 - 🔄 **Service Lifecycle Management**:
-  - `start.ps1` — Launches 9Router (port 20128) and Hermes WebUI (port 8787).
+  - `start.ps1` / `start.sh` — Launches 9Router (port 20128) and Hermes WebUI (port 8787).
   - `stop.ps1` — Gracefully stops all active stack services and lingering ports.
   - `status.ps1` — Real-time health check of stack ports and endpoints.
   - `update.ps1` — Seamless one-click updater for Agent, WebUI repo, and dependencies.
@@ -74,29 +67,35 @@ For documentation, tutorials, resources, and community updates, visit:
 
 ## 🚀 Quick Start (English)
 
-### 1. Automated Installation (Windows)
-Clone the repository or download the latest release:
+### Option A: Windows Setup
 ```powershell
+# 1. Clone
 git clone https://github.com/nitrouxir/hermes-stack-manager.git
 cd hermes-stack-manager
-```
 
-Run PowerShell as Administrator or with standard privileges and execute:
-```powershell
+# 2. Automated Install
 powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
+
+# 3. Launch GUI
+powershell -ExecutionPolicy Bypass -File .\HermesManager.ps1
+# or double-click Run-Manager.bat
 ```
 
-### 2. Launch the Control Center
-- **Windows**: Double-click `Run-Manager.bat` or run:
-  ```powershell
-  powershell -ExecutionPolicy Bypass -File .\HermesManager.ps1
-  ```
-- **macOS / Linux / Windows (Python GUI)**:
-  ```bash
-  python HermesManager.py
-  ```
+### Option B: macOS Setup
+```bash
+# 1. Clone
+git clone https://github.com/nitrouxir/hermes-stack-manager.git
+cd hermes-stack-manager
 
-### 3. Access Stack Services
+# 2. Automated Install
+bash install-mac.sh
+
+# 3. Launch GUI
+python3 HermesManager.py
+# or double-click Run-Manager.command
+```
+
+### Access Services
 - **Hermes WebUI**: `http://localhost:8787`
 - **9Router API Proxy**: `http://localhost:20128`
 
@@ -115,7 +114,7 @@ powershell -ExecutionPolicy Bypass -File .\Install-HermesStack.ps1
 ## 🔗 Links & Resources
 - **Website & Portal**: [nitroux.ir](https://nitroux.ir)
 - **GitHub Repository**: [github.com/nitrouxir/hermes-stack-manager](https://github.com/nitrouxir/hermes-stack-manager)
-- **Persian Guide**: [README.fa.md](README.fa.md)
+- **Persian Documentation**: [README.fa.md](README.fa.md)
 
 ---
 
